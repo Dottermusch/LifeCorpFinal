@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+
+#index{
+    background-image: url('../img/home-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*////////////////////////////////////////*/
+
+
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrap {
+	min-height:100%;
+	position:relative;
+}
+header {
+}
+
+.content {
+	padding-bottom:100px;   /* Height of the footer element */
+}
+footer {
+	width:100%;
+	height:100px;
+	position:absolute;
+	padding-bottom: 5em;
+	bottom:0;
+	left:0;
+}
+
+.submitLink {
+	background-color: transparent;
+	border: none;
+	color: #337ab7;
+	cursor: pointer;
+	font-weight:500;
+	line-height: 1.42857;
+}
+
+.submitLink:hover {
+	text-decoration: underline;
+}

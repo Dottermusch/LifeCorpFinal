@@ -1,0 +1,28 @@
+CREATE table "DEMO_ADMIN" (
+    "ID"         NUMBER NOT NULL,
+    "EMAIL"      VARCHAR2(50),
+    "PASSWORD"   VARCHAR2(50),
+    constraint  "DEMO_ADMIN_PK" primary key ("ID")
+)
+/
+
+CREATE sequence "DEMO_ADMIN_SEQ" 
+/
+
+CREATE trigger "BI_DEMO_ADMIN"  
+  before insert on "DEMO_ADMIN"              
+  for each row 
+begin  
+  if :NEW."ID" is null then
+    select "DEMO_ADMIN_SEQ".nextval into :NEW."ID" from dual;
+  end if;
+end;
+/   
+
+alter table "DEMO_ADMIN" add
+constraint "DEMO_ADMIN_UK1" 
+unique ("EMAIL")
+/   
+
+--admin@lifecorp.com
+--password
