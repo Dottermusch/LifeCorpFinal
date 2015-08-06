@@ -55,7 +55,7 @@ public class DemoOrderDBTest
 		boolean isDeleted = false;
 		long orderId = 0;
 		DemoCustomer customer = DemoCustomerDB.getCustomerById((long) 7);
-		DemoOrder order = DemoOrderDB.getOrderById((long) 93);
+		DemoOrder order = DemoOrderDB.getOrderById((long) 19);
 		
 		order.setDemoCustomer(customer);
 		order.setOrderId((long)0);
@@ -78,12 +78,12 @@ public class DemoOrderDBTest
 	@Test
 	public void testGetOrderById()
 	{
-		long orderId = 93;
+		long orderId = 19;
 		DemoOrder order = DemoOrderDB.getOrderById(orderId);
 		
 		try
 		{
-			assertEquals(order.getOrderId(), (long) 93);
+			assertEquals(order.getOrderId(), (long) 19);
 		}
 		catch (Exception e)
 		{
