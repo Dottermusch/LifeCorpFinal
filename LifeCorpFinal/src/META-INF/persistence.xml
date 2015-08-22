@@ -9,9 +9,9 @@
 		<class>model.DemoProductInfo</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
-			<property name="javax.persistence.jdbc.user" value="system"/>
-			<property name="javax.persistence.jdbc.password" value="password"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+			<property name="javax.persistence.jdbc.user" value="TESTUSER"/>
+			<property name="javax.persistence.jdbc.password" value="Password123"/>
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 		</properties>

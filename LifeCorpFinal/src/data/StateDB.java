@@ -14,14 +14,14 @@ public class StateDB
 {
 	public static ArrayList<State> getAllStates()
 	{
-		final String connectionUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+		final String connectionUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
 		
 		try
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		
 			Connection conn =
-					DriverManager.getConnection(connectionUrl,"system","password");
+					DriverManager.getConnection(connectionUrl,"TESTUSER","Password123");
 			
 			String query = "SELECT * FROM TESTUSER.DEMO_STATES ORDER BY STATE_NAME";
 			

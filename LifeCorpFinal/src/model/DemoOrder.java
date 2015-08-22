@@ -18,7 +18,12 @@ public class DemoOrder implements Serializable, Comparable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	// @GeneratedValue(strategy=GenerationType.IDENTITY)
+	// Test with code below similar to customer
+	@SequenceGenerator(name="SEQ_GEN_ORDERS", sequenceName="DEMO_ORDERS_SEQ", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_GEN_ORDERS")
+	// End test code
+	
 	@Column(name="ORDER_ID")
 	private long orderId;
 
